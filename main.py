@@ -1,12 +1,7 @@
 import json
 from pathlib import Path
-import textwrap
 import google.generativeai as genai
-from IPython.display import Markdown
 
-def to_markdown(text):
-  text = text.replace('•', '  *')
-  return Markdown(textwrap.indent(text, '> ', predicate=lambda _: True))
 
 with open("api_keys.json") as f:
     api_key = json.load(f)["Google-Generative-Language"]
